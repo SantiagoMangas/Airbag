@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirBag Oficial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="logoairbag">
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-item">Inicio</a></li>
+                <li><a href="#" class="nav-item">Música</a></li>
+                <li><a href="#" class="nav-item">Merch</a></li>
+                <li><a href="#" class="nav-item">Calendario</a></li>
+                <li><a href="#" class="nav-item">Novedades</a></li>
+            </ul>
+
+            <div class="cart">
+                <img src="imagenes/carrito.png" alt="carrito">
+            </div>
+        </div>
+    </nav>
+    <section class="slider-wrapper">
+        <div class="slider">
+            <img src="imagenes/portada.jpg" id="slider-img-1" class="slider-img active">
+            <img src="imagenes/portada2.png" id="slider-img-2" class="slider-img">
+            <button class="arrow left" onclick="prevImage()">
+            <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+            <button class="arrow right" onclick="nextImage()">
+            <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </button>
+        </div>
+    </section>
+    <section class="content">
+    <div class="card spotify">
+        <h2 class="card-title">Canal de música Spotify</h2>
+        <img src="imagenes/CanalSpotify.jpg" alt="Canal Spotify" class="card-img">
+    </div>
+    <div class="card lanzamiento">
+        <h2 class="card-title">Escuchá el último<br>Lanzamiento</h2>
+        <img src="imagenes/UltimoLanzamiento.jpg" alt="Último Lanzamiento" class="card-img">
+    </div>
+    </section>
+
+    <section class="discografia">
+    <h2 class="discografia-title">Discografía</h2>
+    <div class="slider-discos-container">
+        <div class="slider-discos-track">
+        <div class="disco"><img src="imagenes/Disco1.jpg" alt="Airbag"><p>Airbag</p></div>
+        <div class="disco"><img src="imagenes/Disco2.jpg" alt="Blanco y negro"><p>Blanco y negro</p></div>
+        <div class="disco"><img src="imagenes/Disco3.jpg" alt="Una hora a Tokyo"><p>Una hora a Tokyo</p></div>
+        <div class="disco"><img src="imagenes/Disco4.jpg" alt="Vorágine"><p>Vorágine</p></div>
+        <div class="disco"><img src="imagenes/Disco5.jpg" alt="Mentira la verdad"><p>Mentira la verdad</p></div>
+        <div class="disco"><img src="imagenes/Disco6.jpg" alt="Libertad"><p>Libertad</p></div>
+        <div class="disco"><img src="imagenes/Disco7.jpg" alt="Al parecer..."><p>Al parecer...</p></div>
+        <!-- Copia para animación infinita -->
+        <div class="disco"><img src="imagenes/Disco1.jpg" alt="Airbag"><p>Airbag</p></div>
+        <div class="disco"><img src="imagenes/Disco2.jpg" alt="Blanco y negro"><p>Blanco y negro</p></div>
+        <div class="disco"><img src="imagenes/Disco3.jpg" alt="Una hora a Tokyo"><p>Una hora a Tokyo</p></div>
+        <div class="disco"><img src="imagenes/Disco4.jpg" alt="Vorágine"><p>Vorágine</p></div>
+        <div class="disco"><img src="imagenes/Disco5.jpg" alt="Mentira la verdad"><p>Mentira la verdad</p></div>
+        <div class="disco"><img src="imagenes/Disco6.jpg" alt="Libertad"><p>Libertad</p></div>
+        <div class="disco"><img src="imagenes/Disco7.jpg" alt="Al parecer..."><p>Al parecer...</p></div>
+        </div>
+    </div>
+    </section>
+
+    <section class="videos-destacados">
+    <h2 class="videos-title">videos más destacados</h2>
+    <div class="videos-grid">
+        <!-- Reemplazá los iframes por tus videos reales -->
+        <div class="video-box"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video-box"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video-box"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video-box"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video-box"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video-box"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video-box"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video-box"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video-box"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video-box"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video-box"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+        <div class="video-box"><iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe></div>
+    </div>
+    </section>
+
+    <section class="integrantes">
+    <div class="integrante">
+        <img src="imagenes/Patricio_Sardelli.jpg" alt="Patricio Sardelli" class="foto-integrante">
+        <p class="nombre-integrante">Patricio Sardelli</p>
+        <a href="#" class="instagram" aria-label="Instagram de Patricio">
+        <img src="imagenes/instagram-icon.svg" alt="Instagram">
+        </a>
+    </div>
+    <div class="integrante">
+        <img src="imagenes/Guido_Sardelli.jpg" alt="Guido Sardelli" class="foto-integrante">
+        <p class="nombre-integrante">Guido Sardelli</p>
+        <a href="#" class="instagram" aria-label="Instagram de Guido">
+        <img src="imagenes/instagram-icon.svg" alt="Instagram">
+        </a>
+    </div>
+    <div class="integrante">
+        <img src="imagenes/Gaston_Sardelli.jpg" alt="Gaston Sardelli" class="foto-integrante">
+        <p class="nombre-integrante">Gaston Sardelli</p>
+        <a href="#" class="instagram" aria-label="Instagram de Gaston">
+        <img src="imagenes/instagram-icon.svg" alt="Instagram">
+        </a>
+    </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
