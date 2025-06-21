@@ -317,3 +317,506 @@ h2, .card-title {
 .instagram img:hover {
   transform: scale(1.1);
 }
+
+
+
+.slider-gira {
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+.gira-track {
+  display: flex;
+  animation: slideGira 20s linear infinite;
+  gap: 40px;
+}
+
+.gira-track img {
+  width: 1469px;
+  height: 694px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+
+@keyframes slideGira {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1469px - 40px));
+  }
+}
+
+/**MERCH**/
+
+.slider-merch {
+  background: black;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.merch-title {
+  font-family: 'Bakbak One', sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.merch-track {
+  display: flex;
+  gap: 40px;
+  animation: slideMerch 60s linear infinite;
+  width: max-content;
+  padding: 0 10vw;
+}
+
+@keyframes slideMerch {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-369px * 3 - 40px * 3));
+  }
+}
+
+.merch-item {
+  background-color: #D9D9D9;
+  width: 369px;
+  height: 655px;
+  border-radius: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.merch-item img {
+  width: 290px;
+  height: 410px;
+  border-radius: 54px;
+  object-fit: cover;
+}
+
+.merch-text {
+  width: 326px;
+  height: 50px;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-comprar {
+  width: 115px;
+  height: 59px;
+  border-radius: 185px;
+  background: white;
+  color: black;
+  font-family: 'Bakbak One', sans-serif;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-comprar span {
+  width: 83px;
+  height: 26px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .gira-track img,
+  .merch-item {
+    width: 90vw;
+    height: auto;
+  }
+
+  .merch-track {
+    animation-duration: 40s;
+  }
+}
+
+.beneficios {
+  background-color: #D9D9D9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.beneficio {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icono-beneficio {
+  width: 125px;
+  height: 125px;
+}
+
+.texto-beneficio p {
+  font-family: 'Bakbak One', sans-serif;
+  font-size: 24px;
+  color: black;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 1275px) {
+  .beneficios {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .beneficio {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .texto-beneficio {
+    height: auto;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .texto-beneficio p {
+    text-align: center;
+  }
+}
+
+.calendario {
+  background-color: #000;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.calendario-title {
+  font-family: 'Bakbak One', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.fecha {
+  background-color: #D9D9D9;
+  width: 1178px;
+  height: 86px;
+  margin: 20px auto;
+  border-radius: 183px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+.lugar, .dia {
+  font-family: 'Bakbak One', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+  width: 358px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-tickets {
+  margin-top: 60px;
+  padding: 16px 32px;
+  font-family: 'Bakbak One', sans-serif;
+  font-size: 18px;
+  border: none;
+  border-radius: 183px;
+  background-color: #D9D9D9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-tickets:hover {
+  background-color: #c0c0c0;
+}
+
+@media (max-width: 1275px) {
+  .calendario-title {
+    font-size: 28px;
+  }
+
+  .fecha {
+    width: 90%;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .lugar,
+  .dia {
+    width: 100%;
+    font-size: 18px;
+    height: auto;
+  }
+
+  .boton-tickets {
+    font-size: 16px;
+    padding: 14px 28px;
+    margin-top: 40px;
+  }
+}
+.ultimas-novedades {
+  background-color: #302D2D;
+  padding: 100px 40px;
+  text-align: center;
+  color: #000;
+}
+
+.novedades-title {
+  font-family: 'Bakbak One', sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  color: white;
+  margin-bottom: 60px;
+}
+
+.novedades-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.novedad-card {
+  width: 369px;
+  height: 655px;
+  background-color: #D9D9D9;
+  border-radius: 72px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.novedad-card img {
+  width: 290px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 72px;
+  margin-bottom: 20px;
+}
+
+.novedad-subtitulo {
+  font-family: 'Bakbak One', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.novedad-descripcion {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 10px;
+}
+
+.novedad-extra {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.link-text {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.novedad-extra-box {
+  width: 369px;
+  height: 190px;
+  background-color: #D9D9D9;
+  border-radius: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.novedad-extra-texto {
+  text-align: right;
+}
+
+.novedad-extra-title {
+  font-family: 'Bakbak One', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.novedad-extra-descripcion {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  color: #000;
+  line-height: 1.2;
+}
+
+
+@media (max-width: 768px) {
+  .novedades-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .novedad-card,
+  .novedad-extra-box {
+    width: 90%;
+    height: auto;
+  }
+
+  .novedad-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .novedad-subtitulo,
+  .novedad-descripcion {
+    width: 100%;
+  }
+
+  .link-text {
+    font-size: 20px;
+  }
+}
+/* SECCIÓN CONTACTO */
+.contact-section {
+  background-image: url('imagenes/Video.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 810px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-title {
+  font-family: 'Bakbak One', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 60px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.icon-circle {
+  width: 134px;
+  height: 134px;
+  background-color: #302D2D;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-circle svg {
+  width: 48px;
+  height: 48px;
+  fill: white;
+}
+
+.icon-text, .social-label {
+  font-family: 'Bakbak One', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+  color: white;
+}
+
+.qr-section {
+  background-color: #000;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #302D2D;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-text {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #D9D9D9;
+}
