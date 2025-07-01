@@ -5,338 +5,460 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AirBag Oficial</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Bai+Jamjuree:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="imagenes/portada.jpg" as="image">
 </head>
 <body>
-<nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="imagenes/logo.png" alt="logoairbag">
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+            <div class="container">
+                <div class="logo">
+                    <img src="imagenes/logo.png" alt="Logo Airbag" width="288" height="87">
+                </div>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="#" class="nav-item" role="menuitem">Inicio</a></li>
+                    <li role="none"><a href="#musica" class="nav-item" role="menuitem">Música</a></li>
+                    <li role="none"><a href="#merch" class="nav-item" role="menuitem">Merch</a></li>
+                    <li role="none"><a href="#calendario" class="nav-item" role="menuitem">Calendario</a></li>
+                    <li role="none"><a href="#novedades" class="nav-item" role="menuitem">Novedades</a></li>
+                </ul>
+
+                <button class="cart" aria-label="Carrito de compras">
+                    <img src="imagenes/carrito.png" alt="" width="38" height="38">
+                </button>
+
+                <button class="mobile-menu-toggle" aria-label="Abrir menú móvil" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            
-            <ul class="nav-menu">
-                <li><a href="#" class="nav-item">Inicio</a></li>
-                <li><a href="#" class="nav-item">Música</a></li>
-                <li><a href="#" class="nav-item">Merch</a></li>
-                <li><a href="#" class="nav-item">Calendario</a></li>
-                <li><a href="#" class="nav-item">Novedades</a></li>
-            </ul>
+        </nav>
+    </header>
 
-            <div class="cart">
-                <img src="imagenes/carrito.png" alt="carrito">
+    <main>
+        <section class="slider-wrapper" aria-label="Carrusel de imágenes principales">
+            <div class="slider">
+                <img src="imagenes/portada.jpg" id="slider-img-1" class="slider-img active" alt="Portada Airbag" loading="eager">
+                <img src="imagenes/portada2.png" id="slider-img-2" class="slider-img" alt="Portada Airbag 2" loading="lazy">
+                <button class="arrow left" onclick="prevImage()" aria-label="Imagen anterior">
+                    <svg width="32" height="32" fill="white" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                <button class="arrow right" onclick="nextImage()" aria-label="Siguiente imagen">
+                    <svg width="32" height="32" fill="white" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+                    </svg>
+                </button>
             </div>
-        </div>
-    </nav>
-    <section class="slider-wrapper">
-        <div class="slider">
-            <img src="imagenes/portada.jpg" id="slider-img-1" class="slider-img active">
-            <img src="imagenes/portada2.png" id="slider-img-2" class="slider-img">
-            <button class="arrow left" onclick="prevImage()">
-            <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-            </button>
-            <button class="arrow right" onclick="nextImage()">
-            <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
-            </button>
-        </div>
-    </section>
-    <section class="content">
-    <div class="card spotify">
-        <h2 class="card-title">Canal de música Spotify</h2>
-        <a href="https://open.spotify.com/intl-es/artist/1wKDGglKV4FsFS85r2Dmpr" target="_blank">
-        <img src="imagenes/CanalSpotify.jpg" alt="Canal Spotify" class="card-img">
-        </a>
-    </div>
-    <div class="card lanzamiento">
-        <h2 class="card-title">Escuchá el último<br>Lanzamiento</h2>
-        <a href="https://youtu.be/oto25r4PfIw?si=wqrU4rHEEAqCmDag" target="_blank">
-        <img src="imagenes/UltimoLanzamiento.jpg" alt="Último Lanzamiento" class="card-img">
-        </a>
-    </div>
-    </section>
+        </section>
 
-    <section class="discografia">
-    <h2 class="discografia-title">Discografía</h2>
-    <div class="slider-discos-container">
-        <div class="slider-discos-track">
-        <div class="disco"><img src="imagenes/Disco1.jpg" alt="Airbag"><p>Airbag</p></div>
-        <div class="disco"><img src="imagenes/Disco2.jpg" alt="Blanco y negro"><p>Blanco y negro</p></div>
-        <div class="disco"><img src="imagenes/Disco3.jpg" alt="Una hora a Tokyo"><p>Una hora a Tokyo</p></div>
-        <div class="disco"><img src="imagenes/Disco4.jpg" alt="Vorágine"><p>Vorágine</p></div>
-        <div class="disco"><img src="imagenes/Disco5.jpg" alt="Mentira la verdad"><p>Mentira la verdad</p></div>
-        <div class="disco"><img src="imagenes/Disco6.jpg" alt="Libertad"><p>Libertad</p></div>
-        <div class="disco"><img src="imagenes/Disco7.jpg" alt="Al parecer..."><p>Al parecer...</p></div>
-        <!-- Copia para animación infinita -->
-        <div class="disco"><img src="imagenes/Disco1.jpg" alt="Airbag"><p>Airbag</p></div>
-        <div class="disco"><img src="imagenes/Disco2.jpg" alt="Blanco y negro"><p>Blanco y negro</p></div>
-        <div class="disco"><img src="imagenes/Disco3.jpg" alt="Una hora a Tokyo"><p>Una hora a Tokyo</p></div>
-        <div class="disco"><img src="imagenes/Disco4.jpg" alt="Vorágine"><p>Vorágine</p></div>
-        <div class="disco"><img src="imagenes/Disco5.jpg" alt="Mentira la verdad"><p>Mentira la verdad</p></div>
-        <div class="disco"><img src="imagenes/Disco6.jpg" alt="Libertad"><p>Libertad</p></div>
-        <div class="disco"><img src="imagenes/Disco7.jpg" alt="Al parecer..."><p>Al parecer...</p></div>
-        </div>
-    </div>
-    </section>
+        <section class="content" id="musica">
+            <div class="card spotify">
+                <h2 class="card-title">Canal de música Spotify</h2>
+                <a href="https://open.spotify.com/intl-es/artist/1wKDGglKV4FsFS85r2Dmpr" target="_blank" rel="noopener noreferrer" aria-label="Visitar canal de Spotify de Airbag">
+                    <img src="imagenes/CanalSpotify.jpg" alt="Canal Spotify de Airbag" class="card-img" loading="lazy">
+                </a>
+            </div>
+            <div class="card lanzamiento">
+                <h2 class="card-title">Escuchá el último<br>Lanzamiento</h2>
+                <a href="https://youtu.be/oto25r4PfIw?si=wqrU4rHEEAqCmDag" target="_blank" rel="noopener noreferrer" aria-label="Ver último lanzamiento en YouTube">
+                    <img src="imagenes/UltimoLanzamiento.jpg" alt="Último Lanzamiento de Airbag" class="card-img" loading="lazy">
+                </a>
+            </div>
+        </section>
 
-    <section class="videos-destacados"> 
-    <h2 class="videos-title">Videos más destacados</h2>
-    <div class="videos-grid">
-        <div class="video-box"><iframe src="https://www.youtube.com/embed/-hdHoMolRiw" frameborder="0" allowfullscreen></iframe></div>
-        <div class="video-box"><iframe src="https://www.youtube.com/embed/ue0RP3C1Brg" frameborder="0" allowfullscreen></iframe></div>
-        <div class="video-box"><iframe src="https://www.youtube.com/embed/FIR-hrPXxzA" frameborder="0" allowfullscreen></iframe></div>
-        <div class="video-box"><iframe src="https://www.youtube.com/embed/UETbWG2bv-s" frameborder="0" allowfullscreen></iframe></div>
-        <div class="video-box"><iframe src="https://www.youtube.com/embed/f56zlhkuttE" frameborder="0" allowfullscreen></iframe></div>
-        <div class="video-box"><iframe src="https://www.youtube.com/embed/d5i1zUbWv0M" frameborder="0" allowfullscreen></iframe></div>
-        <div class="video-box"><iframe src="https://www.youtube.com/embed/6FvNGe-uC1U" frameborder="0" allowfullscreen></iframe></div>
-        <div class="video-box"><iframe src="https://www.youtube.com/embed/zGO0O01Gnm0" frameborder="0" allowfullscreen></iframe></div>
-        <div class="video-box"><iframe src="https://www.youtube.com/embed/kdfkr1WEzIc" frameborder="0" allowfullscreen></iframe></div>
-        <div class="video-box"><iframe src="https://www.youtube.com/embed/-5O2-s32IQk" frameborder="0" allowfullscreen></iframe></div>
-        <div class="video-box"><iframe src="https://www.youtube.com/embed/KXT91ARkZ7Q" frameborder="0" allowfullscreen></iframe></div>
-        <div class="video-box"><iframe src="https://www.youtube.com/embed/rQbWdVQS6eU" frameborder="0" allowfullscreen></iframe></div>
-    </div>
-    </section>
+        <section class="discografia" aria-labelledby="discografia-title">
+            <h2 id="discografia-title" class="discografia-title">Discografía</h2>
+            <div class="slider-discos-container">
+                <div class="slider-discos-track">
+                    <div class="disco"><img src="imagenes/Disco1.jpg" alt="Álbum Airbag" loading="lazy"><p>Airbag</p></div>
+                    <div class="disco"><img src="imagenes/Disco2.jpg" alt="Álbum Blanco y negro" loading="lazy"><p>Blanco y negro</p></div>
+                    <div class="disco"><img src="imagenes/Disco3.jpg" alt="Álbum Una hora a Tokyo" loading="lazy"><p>Una hora a Tokyo</p></div>
+                    <div class="disco"><img src="imagenes/Disco4.jpg" alt="Álbum Vorágine" loading="lazy"><p>Vorágine</p></div>
+                    <div class="disco"><img src="imagenes/Disco5.jpg" alt="Álbum Mentira la verdad" loading="lazy"><p>Mentira la verdad</p></div>
+                    <div class="disco"><img src="imagenes/Disco6.jpg" alt="Álbum Libertad" loading="lazy"><p>Libertad</p></div>
+                    <div class="disco"><img src="imagenes/Disco7.jpg" alt="Álbum Al parecer..." loading="lazy"><p>Al parecer...</p></div>
+                    <!-- Duplicado para loop infinito -->
+                    <div class="disco"><img src="imagenes/Disco1.jpg" alt="Álbum Airbag" loading="lazy"><p>Airbag</p></div>
+                    <div class="disco"><img src="imagenes/Disco2.jpg" alt="Álbum Blanco y negro" loading="lazy"><p>Blanco y negro</p></div>
+                    <div class="disco"><img src="imagenes/Disco3.jpg" alt="Álbum Una hora a Tokyo" loading="lazy"><p>Una hora a Tokyo</p></div>
+                    <div class="disco"><img src="imagenes/Disco4.jpg" alt="Álbum Vorágine" loading="lazy"><p>Vorágine</p></div>
+                    <div class="disco"><img src="imagenes/Disco5.jpg" alt="Álbum Mentira la verdad" loading="lazy"><p>Mentira la verdad</p></div>
+                    <div class="disco"><img src="imagenes/Disco6.jpg" alt="Álbum Libertad" loading="lazy"><p>Libertad</p></div>
+                    <div class="disco"><img src="imagenes/Disco7.jpg" alt="Álbum Al parecer..." loading="lazy"><p>Al parecer...</p></div>
+                </div>
+            </div>
+        </section>
 
-    <section class="integrantes">
-    <div class="integrante">
-        <img src="imagenes/Patricio_Sardelli.jpg" alt="Patricio Sardelli" class="foto-integrante">
-        <p class="nombre-integrante">Patricio Sardelli</p>
-        <a href="https://www.instagram.com/patriciosardelli/?hl=es" class="instagram" aria-label="Instagram de Patricio">
-        <img src="imagenes/instagram-icon.svg" alt="Instagram">
-        </a>
-    </div>
-    <div class="integrante">
-        <img src="imagenes/Guido_Sardelli.jpg" alt="Guido Sardelli" class="foto-integrante">
-        <p class="nombre-integrante">Guido Sardelli</p>
-        <a href="https://www.instagram.com/guidoarmido?igsh=MzR3ZTNieXBicnNt" class="instagram" aria-label="Instagram de Guido">
-        <img src="imagenes/instagram-icon.svg" alt="Instagram">
-        </a>
-    </div>
-    <div class="integrante">
-        <img src="imagenes/Gaston_Sardelli.jpg" alt="Gaston Sardelli" class="foto-integrante">
-        <p class="nombre-integrante">Gaston Sardelli</p>
-        <a href="https://www.instagram.com/gastonsardelli?igsh=Njg4ZWQxbWVwcGhj" class="instagram" aria-label="Instagram de Gaston">
-        <img src="imagenes/instagram-icon.svg" alt="Instagram">
-        </a>
-    </div>
-    </section>
-    <section class="slider-gira">
-    <div class="gira-track">
-        <img src="imagenes/Gira.jpg" alt="Gira Airbag">
-        <img src="imagenes/Gira.jpg" alt="Gira Airbag (copia)">
-        <img src="imagenes/Gira.jpg" alt="Gira Airbag (copia)">
-    </div>
-    </section>
+        <!-- Videos destacados -->
+        <section class="videos-destacados" aria-labelledby="videos-title">
+            <h2 id="videos-title" class="videos-title">Videos más destacados</h2>
+            <div class="videos-grid">
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/-hdHoMolRiw?rel=0&modestbranding=1&controls=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            title="Video destacado 1"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/ue0RP3C1Brg?rel=0&modestbranding=1&controls=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            title="Video destacado 2"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/FIR-hrPXxzA?rel=0&modestbranding=1&controls=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            title="Video destacado 3"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/UETbWG2bv-s?rel=0&modestbranding=1&controls=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            title="Video destacado 4"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/f56zlhkuttE?rel=0&modestbranding=1&controls=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            title="Video destacado 5"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/d5i1zUbWv0M?rel=0&modestbranding=1&controls=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            title="Video destacado 6"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/6FvNGe-uC1U?rel=0&modestbranding=1&controls=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            title="Video destacado 7"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/zGO0O01Gnm0?rel=0&modestbranding=1&controls=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            title="Video destacado 8"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/kdfkr1WEzIc?rel=0&modestbranding=1&controls=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            title="Video destacado 9"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/-5O2-s32IQk?rel=0&modestbranding=1&controls=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            title="Video destacado 10"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/KXT91ARkZ7Q?rel=0&modestbranding=1&controls=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            title="Video destacado 11"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="video-box">
+                    <iframe src="https://www.youtube-nocookie.com/embed/rQbWdVQS6eU?rel=0&modestbranding=1&controls=1" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            title="Video destacado 12"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
 
-    <section class="slider-merch">
-    <h2 class="merch-title">Merch</h2>
-    <div class="merch-track">
-        <div class="merch-item">
-        <img src="imagenes/Merch1.png" alt="Remera 96 sardelli">
-        <p class="merch-text">Remera 96 sardelli<br>$25.000<br>3 cuotas sin interés</p>
-        <button class="btn-comprar"><span>comprar</span></button>
-        </div>
-        <div class="merch-item">
-        <img src="imagenes/Merch2.png" alt="Remera Airbag">
-        <p class="merch-text">Remera Airbag<br>$25.000<br>3 cuotas sin interés</p>
-        <button class="btn-comprar"><span>comprar</span></button>
-        </div>
-        <div class="merch-item">
-        <img src="imagenes/Merch3.png" alt="Remera Airbag">
-        <p class="merch-text">Remera Airbag<br>$25.000<br>3 cuotas sin interés</p>
-        <button class="btn-comprar"><span>comprar</span></button>
-        </div>=
-        <div class="merch-item">
-        <img src="imagenes/Merch4.jpg" alt="-Buzo calavera">
-        <p class="merch-text">Buzo calavera<br>$85.000<br>3 cuotas sin interés</p>
-        <button class="btn-comprar"><span>comprar</span></button>
-        </div>
-        <div class="merch-item">
-        <img src="imagenes/Merch5.jpg" alt="-Remera huracán">
-        <p class="merch-text">Remera huracán<br>$25.000<br>3 cuotas sin interés</p>
-        <button class="btn-comprar"><span>comprar</span></button>
-        </div>
-        <div class="merch-item">
-        <img src="imagenes/Merch6.jpg" alt="Remera Airbag">
-        <p class="merch-text">Remera Airbag<br>$25.000<br>3 cuotas sin interés</p>
-        <button class="btn-comprar"><span>comprar</span></button>
-        </div>
-        <div class="merch-item">
-        <img src="imagenes/Merch1.png" alt="Remera 96 sardelli">
-        <p class="merch-text">Remera 96 sardelli<br>$25.000<br>3 cuotas sin interés</p>
-        <button class="btn-comprar"><span>comprar</span></button>
-        </div>
-        <div class="merch-item">
-        <img src="imagenes/Merch2.png" alt="Remera Airbag">
-        <p class="merch-text">Remera Airbag<br>$25.000<br>3 cuotas sin interés</p>
-        <button class="btn-comprar"><span>comprar</span></button>
-        </div>
-        <div class="merch-item">
-        <img src="imagenes/Merch3.png" alt="Remera Airbag">
-        <p class="merch-text">Remera Airbag<br>$25.000<br>3 cuotas sin interés</p>
-        <button class="btn-comprar"><span>comprar</span></button>
-        </div>=
-        <div class="merch-item">
-        <img src="imagenes/Merch4.jpg" alt="-Buzo calavera">
-        <p class="merch-text">Buzo calavera<br>$85.000<br>3 cuotas sin interés</p>
-        <button class="btn-comprar"><span>comprar</span></button>
-        </div>
-        <div class="merch-item">
-        <img src="imagenes/Merch5.jpg" alt="-Remera huracán">
-        <p class="merch-text">Remera huracán<br>$25.000<br>3 cuotas sin interés</p>
-        <button class="btn-comprar"><span>comprar</span></button>
-        </div>
-        <div class="merch-item">
-        <img src="imagenes/Merch6.jpg" alt="Remera Airbag">
-        <p class="merch-text">Remera Airbag<br>$25.000<br>3 cuotas sin interés</p>
-        <button class="btn-comprar"><span>comprar</span></button>
-        </div>
-    </div>
-    </section>
+        <section class="integrantes" aria-labelledby="integrantes-title">
+            <h2 id="integrantes-title" class="sr-only">Integrantes de la banda</h2>
+            <div class="integrante">
+                <img src="imagenes/Patricio_Sardelli.jpg" alt="Patricio Sardelli" class="foto-integrante" loading="lazy">
+                <p class="nombre-integrante">Patricio Sardelli</p>
+                <a href="https://www.instagram.com/patriciosardelli/?hl=es" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Patricio Sardelli">
+                    <img src="imagenes/Instagram_icon.png" alt="" width="32" height="32">
+                </a>
+            </div>
+            <div class="integrante">
+                <img src="imagenes/Guido_Sardelli.jpg" alt="Guido Sardelli" class="foto-integrante" loading="lazy">
+                <p class="nombre-integrante">Guido Sardelli</p>
+                <a href="https://www.instagram.com/guidoarmido?igsh=MzR3ZTNieXBicnNt" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Guido Sardelli">
+                    <img src="imagenes/Instagram_icon.png" alt="" width="32" height="32">
+                </a>
+            </div>
+            <div class="integrante">
+                <img src="imagenes/Gaston_Sardelli.jpg" alt="Gaston Sardelli" class="foto-integrante" loading="lazy">
+                <p class="nombre-integrante">Gaston Sardelli</p>
+                <a href="https://www.instagram.com/gastonsardelli?igsh=Njg4ZWQxbWVwcGhj" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Gaston Sardelli">
+                    <img src="imagenes/Instagram_icon.png" alt="" width="32" height="32">
+                </a>
+            </div>
+        </section>
 
-    <section class="beneficios">
-    <div class="beneficio">
-        <img src="imagenes/Tarjeta.png" alt="Tarjeta" class="icono-beneficio">
-        <div class="texto-beneficio">
-        <p>3 cuotas sin interés con todas<br>las tarjetas</p>
-        </div>
-    </div>
-    <div class="beneficio">
-        <img src="imagenes/Devolucion.png" alt="Devolución" class="icono-beneficio">
-        <div class="texto-beneficio">
-        <p>Cambios y devoluciones</p>
-        </div>
-    </div>
-    </section>
+        <section class="slider-gira" aria-label="Imágenes de la gira">
+            <div class="gira-track">
+                <img src="imagenes/Gira.jpg" alt="Gira Airbag" loading="lazy">
+                <img src="imagenes/Gira.jpg" alt="Gira Airbag" loading="lazy">
+                <img src="imagenes/Gira.jpg" alt="Gira Airbag" loading="lazy">
+            </div>
+        </section>
 
-    <section class="calendario">
-        <h2 class="calendario-title">Calendario</h2>
+        <section class="slider-merch" id="merch" aria-labelledby="merch-title">
+            <h2 id="merch-title" class="merch-title">Merch</h2>
+            <div class="merch-track">
+                <div class="merch-item">
+                    <img src="imagenes/Merch1.png" alt="Remera 96 sardelli" loading="lazy">
+                    <p class="merch-text">Remera 96 sardelli<br>$25.000<br>3 cuotas sin interés</p>
+                    <button class="btn-comprar" aria-label="Comprar Remera 96 sardelli"><span>comprar</span></button>
+                </div>
+                <div class="merch-item">
+                    <img src="imagenes/Merch2.png" alt="Remera Airbag" loading="lazy">
+                    <p class="merch-text">Remera Airbag<br>$25.000<br>3 cuotas sin interés</p>
+                    <button class="btn-comprar" aria-label="Comprar Remera Airbag"><span>comprar</span></button>
+                </div>
+                <div class="merch-item">
+                    <img src="imagenes/Merch3.png" alt="Remera Airbag" loading="lazy">
+                    <p class="merch-text">Remera Airbag<br>$25.000<br>3 cuotas sin interés</p>
+                    <button class="btn-comprar" aria-label="Comprar Remera Airbag"><span>comprar</span></button>
+                </div>
+                <div class="merch-item">
+                    <img src="imagenes/Merch4.jpg" alt="Buzo calavera" loading="lazy">
+                    <p class="merch-text">Buzo calavera<br>$85.000<br>3 cuotas sin interés</p>
+                    <button class="btn-comprar" aria-label="Comprar Buzo calavera"><span>comprar</span></button>
+                </div>
+                <div class="merch-item">
+                    <img src="imagenes/Merch5.jpg" alt="Remera huracán" loading="lazy">
+                    <p class="merch-text">Remera huracán<br>$25.000<br>3 cuotas sin interés</p>
+                    <button class="btn-comprar" aria-label="Comprar Remera huracán"><span>comprar</span></button>
+                </div>
+                <div class="merch-item">
+                    <img src="imagenes/Merch6.jpg" alt="Remera Airbag" loading="lazy">
+                    <p class="merch-text">Remera Airbag<br>$25.000<br>3 cuotas sin interés</p>
+                    <button class="btn-comprar" aria-label="Comprar Remera Airbag"><span>comprar</span></button>
+                </div>
+                <!-- Duplicado para loop infinito -->
+                <div class="merch-item">
+                    <img src="imagenes/Merch1.png" alt="Remera 96 sardelli" loading="lazy">
+                    <p class="merch-text">Remera 96 sardelli<br>$25.000<br>3 cuotas sin interés</p>
+                    <button class="btn-comprar" aria-label="Comprar Remera 96 sardelli"><span>comprar</span></button>
+                </div>
+                <div class="merch-item">
+                    <img src="imagenes/Merch2.png" alt="Remera Airbag" loading="lazy">
+                    <p class="merch-text">Remera Airbag<br>$25.000<br>3 cuotas sin interés</p>
+                    <button class="btn-comprar" aria-label="Comprar Remera Airbag"><span>comprar</span></button>
+                </div>
+                <div class="merch-item">
+                    <img src="imagenes/Merch3.png" alt="Remera Airbag" loading="lazy">
+                    <p class="merch-text">Remera Airbag<br>$25.000<br>3 cuotas sin interés</p>
+                    <button class="btn-comprar" aria-label="Comprar Remera Airbag"><span>comprar</span></button>
+                </div>
+                <div class="merch-item">
+                    <img src="imagenes/Merch4.jpg" alt="Buzo calavera" loading="lazy">
+                    <p class="merch-text">Buzo calavera<br>$85.000<br>3 cuotas sin interés</p>
+                    <button class="btn-comprar" aria-label="Comprar Buzo calavera"><span>comprar</span></button>
+                </div>
+                <div class="merch-item">
+                    <img src="imagenes/Merch5.jpg" alt="Remera huracán" loading="lazy">
+                    <p class="merch-text">Remera huracán<br>$25.000<br>3 cuotas sin interés</p>
+                    <button class="btn-comprar" aria-label="Comprar Remera huracán"><span>comprar</span></button>
+                </div>
+                <div class="merch-item">
+                    <img src="imagenes/Merch6.jpg" alt="Remera Airbag" loading="lazy">
+                    <p class="merch-text">Remera Airbag<br>$25.000<br>3 cuotas sin interés</p>
+                    <button class="btn-comprar" aria-label="Comprar Remera Airbag"><span>comprar</span></button>
+                </div>
+            </div>
+        </section>
 
-        <div class="fecha">
-            <span class="lugar">Luna Park</span>
-            <span class="dia">29/03</span>
-        </div>
-        <div class="fecha">
-            <span class="lugar">Luna Park</span>
-            <span class="dia">4/04</span>
-        </div>
-        <div class="fecha">
-            <span class="lugar">Luna Park</span>
-            <span class="dia">5/04</span>
-        </div>
-        <div class="fecha">
-            <span class="lugar">Luna Park</span>
-            <span class="dia">6/04</span>
-        </div>
-        <div class="fecha">
-            <span class="lugar">Movistar Arena</span>
-            <span class="dia">13/06</span>
-        </div>
-        <div class="fecha">
-            <span class="lugar">Estadio Velez Saefield</span>
-            <span class="dia">22/11</span>
-        </div>
-        <div class="fecha">
-            <span class="lugar">Estadio Velez Saefield</span>
-            <span class="dia">19/12</span>
-        </div>
-        <div class="fecha">
-            <span class="lugar">Estadio Velez Saefield</span>
-            <span class="dia">20/12</span>
-        </div>
+        <section class="beneficios" aria-labelledby="beneficios-title">
+            <h2 id="beneficios-title" class="sr-only">Beneficios de compra</h2>
+            <div class="beneficio">
+                <img src="imagenes/Tarjeta.png" alt="" class="icono-beneficio" loading="lazy">
+                <div class="texto-beneficio">
+                    <p>3 cuotas sin interés con todas<br>las tarjetas</p>
+                </div>
+            </div>
+            <div class="beneficio">
+                <img src="imagenes/Devolucion.png" alt="" class="icono-beneficio" loading="lazy">
+                <div class="texto-beneficio">
+                    <p>Cambios y devoluciones</p>
+                </div>
+            </div>
+        </section>
 
-        <button class="boton-tickets">Tickets</button>
-    </section>
-    <section class="ultimas-novedades">
-    <h2 class="novedades-title">Últimas novedades</h2>
+        <section class="calendario" id="calendario" aria-labelledby="calendario-title">
+            <h2 id="calendario-title" class="calendario-title">Calendario</h2>
+            <div class="fechas-container">
+                <div class="fecha">
+                    <span class="lugar">Luna Park</span>
+                    <span class="dia">29/03</span>
+                </div>
+                <div class="fecha">
+                    <span class="lugar">Luna Park</span>
+                    <span class="dia">4/04</span>
+                </div>
+                <div class="fecha">
+                    <span class="lugar">Luna Park</span>
+                    <span class="dia">5/04</span>
+                </div>
+                <div class="fecha">
+                    <span class="lugar">Luna Park</span>
+                    <span class="dia">6/04</span>
+                </div>
+                <div class="fecha">
+                    <span class="lugar">Movistar Arena</span>
+                    <span class="dia">13/06</span>
+                </div>
+                <div class="fecha">
+                    <span class="lugar">Estadio Velez Saefield</span>
+                    <span class="dia">22/11</span>
+                </div>
+                <div class="fecha">
+                    <span class="lugar">Estadio Velez Saefield</span>
+                    <span class="dia">19/12</span>
+                </div>
+                <div class="fecha">
+                    <span class="lugar">Estadio Velez Saefield</span>
+                    <span class="dia">20/12</span>
+                </div>
+            </div>
+            <button class="boton-tickets">Tickets</button>
+        </section>
 
-    <div class="novedades-grid">
-        <!-- Novedad 1 -->
-        <a href="https://billboard.ar/lanzamientos/airbag-lanza-el-club-de-la-pelea-i-la-primera-parte-de-su-nuevo-album-tras-agotar-dos-river/" target="_blank" class="novedad-card">
-        <img src="imagenes/ClubPelea.jpg" alt="El club de la pelea">
-        <h3 class="novedad-subtitulo">El club de la pelea</h3>
-        <p class="novedad-descripcion">
-            Será el octavo álbum de estudio de la banda.<br>
-            Está previsto que sea lanzado en marzo de 2025.
-        </p>
-        </a>
+        <section class="ultimas-novedades" id="novedades" aria-labelledby="novedades-title">
+            <h2 id="novedades-title" class="novedades-title">Últimas novedades</h2>
 
-        <!-- Novedad 2 -->
-        <a href="https://adnpositivo.com/airbag-cerro-el-ano-a-puro-hard-rock/" target="_blank" class="novedad-card">
-        <img src="imagenes/Rock.jpg" alt="20 años de rock">
-        <h3 class="novedad-subtitulo">Airbag 20 años de rock</h3>
-        <p class="novedad-descripcion">
-            El broche de oro a la gira por sus 20 años.
-        </p>
-        </a>
+            <div class="novedades-grid">
+                <a href="https://billboard.ar/lanzamientos/airbag-lanza-el-club-de-la-pelea-i-la-primera-parte-de-su-nuevo-album-tras-agotar-dos-river/" target="_blank" rel="noopener noreferrer" class="novedad-card">
+                    <img src="imagenes/ClubPelea.jpg" alt="El club de la pelea" loading="lazy">
+                    <h3 class="novedad-subtitulo">El club de la pelea</h3>
+                    <p class="novedad-descripcion">
+                        Será el octavo álbum de estudio de la banda.<br>
+                        Está previsto que sea lanzado en marzo de 2025.
+                    </p>
+                </a>
 
-        <!-- Novedad 3 -->
-        <a href="https://indiehoy.com/recitales/coberturas/airbag-velez-rock-epica-nuevo-disco-camino/" target="_blank" class="novedad-card">
-        <img src="imagenes/Velez.jpg" alt="Vélez">
-        <h3 class="novedad-subtitulo">Airbag en Vélez: Rock y épica</h3>
-        <p class="novedad-descripcion">
-            La banda cerró su gira “Jinetes Cromados Tour” con el show más grande de sus 20 años de carrera.
-        </p>
-        </a>
-    </div>
+                <a href="https://adnpositivo.com/airbag-cerro-el-ano-a-puro-hard-rock/" target="_blank" rel="noopener noreferrer" class="novedad-card">
+                    <img src="imagenes/Rock.jpg" alt="20 años de rock" loading="lazy">
+                    <h3 class="novedad-subtitulo">Airbag 20 años de rock</h3>
+                    <p class="novedad-descripcion">
+                        El broche de oro a la gira por sus 20 años.
+                    </p>
+                </a>
 
-    <!-- Detrás de la música -->
-    <div class="novedad-extra">
-        <p class="link-text">LINK DE YOUTUBE</p>
-        <a href="https://youtu.be/hSO7awNZi_0?si=I3uUOMaTVmAZO0cx" target="_blank" class="novedad-extra-box">
-        <div class="novedad-extra-texto">
-            <h3 class="novedad-extra-title">Detrás de la música #1</h3>
-            <p class="novedad-extra-descripcion">
-            Conocé las intimidades de la<br>
-            banda antes de los shows
-            </p>
-        </div>
-        </a>
-    </div>
-    </section>
-    
-    <section class="contact-section">
-        <div class="video-background">
-            <iframe
-            src="https://www.youtube.com/embed/F3hQydGDFlQ?autoplay=1&mute=1&controls=0&loop=1&playlist=F3hQydGDFlQ"
-            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="contact-container">
-            <h2 class="contact-title">Contacto</h2>
-            <div class="social-icons">
-                <div class="social-icon">
-                <a href="https://www.instagram.com/airbag.oficial/" target="_blank" class="social-icon">
-                    <div class="icon-circle">
-                    <svg viewBox="0 0 24 24">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
+                <a href="https://indiehoy.com/recitales/coberturas/airbag-velez-rock-epica-nuevo-disco-camino/" target="_blank" rel="noopener noreferrer" class="novedad-card">
+                    <img src="imagenes/Velez.jpg" alt="Vélez" loading="lazy">
+                    <h3 class="novedad-subtitulo">Airbag en Vélez: Rock y épica</h3>
+                    <p class="novedad-descripcion">
+                        La banda cerró su gira "Jinetes Cromados Tour" con el show más grande de sus 20 años de carrera.
+                    </p>
+                </a>
+            </div>
+
+            <div class="novedad-extra">
+                <p class="link-text">LINK DE YOUTUBE</p>
+                <a href="https://youtu.be/hSO7awNZi_0?si=I3uUOMaTVmAZO0cx" target="_blank" rel="noopener noreferrer" class="novedad-extra-box">
+                    <div class="novedad-extra-texto">
+                        <h3 class="novedad-extra-title">Detrás de la música #1</h3>
+                        <p class="novedad-extra-descripcion">
+                            Conocé las intimidades de la<br>
+                            banda antes de los shows
+                        </p>
                     </div>
                 </a>
-                <span class="icon-text">AirBag.oficial</span> 
             </div>
-            <div class="social-icon">
-            <a href="https://open.spotify.com/intl-es/artist/1wKDGglKV4FsFS85r2Dmpr" target="_blank" class="social-icon"> 
-                <div class="icon-circle">
-                    <svg viewBox="0 0 24 24">
-                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
-                    </svg>
-                </div> </a>
-                <span class="social-label">Airbagoficial</span>
-        </div>
-        <div class="social-icon">
-            <a href="https://www.youtube.com/@airbagoficial" target="_blank" class="social-icon">
-                <div class="icon-circle">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                </div></a>
-                <span class="social-label">Airbag</span>
+        </section>
+        
+        <section class="contact-section" aria-labelledby="contact-title">
+            <div class="video-background">
+                <iframe
+                    src="https://www.youtube.com/embed/F3hQydGDFlQ?autoplay=1&mute=1&controls=0&loop=1&playlist=F3hQydGDFlQ"
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen
+                    loading="lazy"
+                    title="Video de fondo">
+                </iframe>
             </div>
-            </div> 
-        </div>  
-    </section>
-    
-    <section class="qr-section">
-    <img src="imagenes/Qr.png" alt="QR Airbag" class="qr-img">
-    </section>
+            <div class="contact-container">
+                <h2 id="contact-title" class="contact-title">Contacto</h2>
+                <div class="social-icons">
+                    <div class="social-icon">
+                        <a href="https://www.instagram.com/airbag.oficial/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram de Airbag">
+                            <div class="icon-circle">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </div>
+                        </a>
+                        <span class="icon-text">AirBag.oficial</span> 
+                    </div>
+                    <div class="social-icon">
+                        <a href="https://open.spotify.com/intl-es/artist/1wKDGglKV4FsFS85r2Dmpr" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Spotify de Airbag"> 
+                            <div class="icon-circle">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+                                </svg>
+                            </div>
+                        </a>
+                        <span class="social-label">Airbagoficial</span>
+                    </div>
+                    <div class="social-icon">
+                        <a href="https://www.youtube.com/@airbagoficial" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube de Airbag">
+                            <div class="icon-circle">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </div>
+                        </a>
+                        <span class="social-label">Airbag</span>
+                    </div>
+                </div> 
+            </div>  
+        </section>
+        
+        <section class="qr-section" aria-label="Código QR">
+            <img src="imagenes/Qr.png" alt="Código QR de Airbag" class="qr-img" loading="lazy">
+        </section>
+    </main>
 
     <footer class="footer">
         <p class="footer-text">Copyright © 2019 Airbag - SurArt. 2025. Todos los derechos reservados</p>
