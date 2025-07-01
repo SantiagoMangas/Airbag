@@ -65,7 +65,7 @@ body {
   backdrop-filter: blur(10px);
   padding: clamp(0.75rem, 1.5vw, 1.5rem) 0;
   width: 100%;
-  max-width: 85rem;
+  max-width: 82rem;
   min-height: var(--navbar-height);
   position: fixed;
   top: var(--spacing-lg);
@@ -210,6 +210,34 @@ body {
 .mobile-menu-header .logo img {
   width: clamp(10rem, 12vw, 14rem);
   height: auto;
+}
+
+.mobile-menu-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+}
+
+.mobile-menu-close span {
+  position: absolute;
+  width: 1.5rem;
+  height: 0.125rem;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transition: 0.3s;
+}
+
+.mobile-menu-close span:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.mobile-menu-close span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .mobile-nav-menu {
@@ -530,12 +558,13 @@ body {
   display: flex;
   gap: var(--spacing-lg);
   will-change: transform;
-  animation: slideGiraDesktop 20s linear infinite;
+  animation: slideGiraDesktop 40s linear infinite;
+  width: max-content;
 }
 
 .gira-track img {
-  width: 91.8125rem;
-  height: 43.375rem;
+  width: clamp(70vw, 91.8125rem, 91.8125rem); 
+  height: clamp(30vw, 43.375rem, 43.375rem); 
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 1.25rem;
@@ -547,17 +576,40 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-91.8125rem - var(--spacing-lg)));
+    transform: translateX(calc(-6 * (clamp(70vw, 91.8125rem, 91.8125rem) + var(--spacing-lg))));
   }
 }
 
-/* Animación para mobile */
+@media (max-width: 768px) {
+  .gira-track {
+    animation: slideGiraMobile 55s linear infinite;
+  }
+
+  .gira-track img {
+    width: 85vw;
+    height: 50vw;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gira-track img {
+    width: 90vw;
+    height: 55vw;
+    border-radius: 0.75rem;
+  }
+
+  .gira-track {
+    animation: slideGiraMobile 25s linear infinite;
+  }
+}
+
 @keyframes slideGiraMobile {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-90vw - var(--spacing-lg)));
+    transform: translateX(calc(-6 * (90vw + var(--spacing-lg))));
   }
 }
 
@@ -777,6 +829,7 @@ body {
 
 .novedad-card {
   width: 23.0625rem;
+  min-height: 40.9375rem;
   background-color: var(--gris);
   border-radius: 4.5rem;
   padding: var(--spacing-xl) var(--spacing-md);
@@ -823,25 +876,6 @@ body {
   color: var(--fondo);
   margin: 0;
   padding: 0 var(--spacing-xs);
-}
-
-.novedad-card.novedad-video {
-  padding: var(--spacing-md);
-  justify-content: flex-start;
-}
-
-.novedad-card.novedad-video iframe {
-  width: 100%;
-  height: 180px;
-  border-radius: 1rem;
-  margin-bottom: var(--spacing-md);
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .novedad-card.novedad-video iframe {
-    height: auto;
-    aspect-ratio: 16 / 9;
-  }
 }
 
 /* Sección contacto */
