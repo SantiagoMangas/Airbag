@@ -1,4 +1,3 @@
-/* Variables CSS */
 :root {
   --negro: #000;
   --gris: #d9d9d9;
@@ -24,16 +23,15 @@
   --spacing-2xl: 4rem;
   --spacing-3xl: 6rem;
 
-  /* Tamaños responsive del navbar */
-  --navbar-height: clamp(6rem, 8vw, 9.1875rem);
-  --logo-width: clamp(12rem, 15vw, 18rem);
-  --logo-height: clamp(3.6rem, 4.5vw, 5.4375rem);
-  --nav-font-size: clamp(1.2rem, 2vw, 2.5rem);
-  --cart-size: clamp(2.5rem, 3.5vw, 3.625rem);
-  --cart-icon-size: clamp(1.5rem, 2vw, 2.375rem);
+  /* Tamaños responsive del navbar - REDUCIDOS */
+  --navbar-height: clamp(4rem, 5vw, 6rem);
+  --logo-width: clamp(8rem, 10vw, 12rem);
+  --logo-height: clamp(2.4rem, 3vw, 3.6rem);
+  --nav-font-size: clamp(0.9rem, 1.2vw, 1.5rem);
+  --cart-size: clamp(2rem, 2.5vw, 2.8rem);
+  --cart-icon-size: clamp(1.2rem, 1.5vw, 1.8rem);
 }
 
-/* Reset y base */
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +44,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Utilidades de accesibilidad */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -59,16 +56,15 @@ body {
   border: 0;
 }
 
-/* Navbar mejorado y responsive */
 .navbar {
   background-color: rgba(48, 45, 45, 0.9);
   backdrop-filter: blur(10px);
-  padding: clamp(0.75rem, 1.5vw, 1.5rem) 0;
+  padding: clamp(0.3rem, 0.6vw, 0.6rem) 0;
   width: 100%;
   max-width: 82rem;
   min-height: var(--navbar-height);
   position: fixed;
-  top: var(--spacing-lg);
+  top: var(--spacing-sm);
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.4);
@@ -83,7 +79,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 clamp(1rem, 2vw, 1.5rem);
+  padding: 0 clamp(0.8rem, 1.5vw, 1.2rem);
 }
 
 .logo img {
@@ -96,7 +92,7 @@ body {
 
 .nav-menu {
   display: flex;
-  gap: clamp(1rem, 2vw, 2rem);
+  gap: clamp(0.8rem, 1.5vw, 1.5rem);
   list-style: none;
 }
 
@@ -117,7 +113,7 @@ body {
 .cart {
   background-color: white;
   border-radius: 50%;
-  padding: clamp(0.375rem, 0.5vw, 0.5rem);
+  padding: clamp(0.25rem, 0.4vw, 0.4rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,7 +136,7 @@ body {
   height: var(--cart-icon-size);
 }
 
-/* Menú móvil */
+/* Menú celu */
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;
@@ -172,7 +168,6 @@ body {
   transform: rotate(-45deg) translate(0.3rem, -0.3rem);
 }
 
-/* Overlay del menú móvil */
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
@@ -297,7 +292,6 @@ body {
   font-weight: bold;
 }
 
-/* Slider principal */
 .slider {
   position: relative;
   top: 0;
@@ -360,7 +354,6 @@ body {
   right: var(--spacing-md);
 }
 
-/* Contenido principal */
 .content {
   display: flex;
   justify-content: center;
@@ -461,7 +454,6 @@ body {
   }
 }
 
-/* Videos destacados */
 .videos-destacados {
   background-color: var(--fondo);
   padding: var(--spacing-lg);
@@ -501,7 +493,6 @@ body {
   left: 0;
 }
 
-/* Integrantes */
 .integrantes {
   background-color: var(--negro);
   padding: var(--spacing-3xl) var(--spacing-lg);
@@ -547,7 +538,6 @@ body {
   border-radius: 0.25rem;
 }
 
-/* Slider gira */
 .slider-gira {
   width: 100%;
   overflow: hidden;
@@ -563,14 +553,13 @@ body {
 }
 
 .gira-track img {
-  width: clamp(70vw, 91.8125rem, 91.8125rem); 
-  height: clamp(30vw, 43.375rem, 43.375rem); 
+  width: clamp(70vw, 91.8125rem, 91.8125rem);
+  height: clamp(30vw, 43.375rem, 43.375rem);
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 1.25rem;
 }
 
-/* Animación para desktop */
 @keyframes slideGiraDesktop {
   0% {
     transform: translateX(0);
@@ -613,7 +602,6 @@ body {
   }
 }
 
-/* Merch */
 .slider-merch {
   background: var(--negro);
   overflow: hidden;
@@ -706,7 +694,6 @@ body {
   text-align: center;
 }
 
-/* Beneficios */
 .beneficios {
   background-color: var(--gris);
   display: flex;
@@ -737,60 +724,62 @@ body {
   text-align: center;
 }
 
-/* Calendario */
 .calendario {
   background-color: var(--negro);
-  padding: var(--spacing-3xl) var(--spacing-lg);
+  padding: var(--spacing-2xl) var(--spacing-lg);
   text-align: center;
 }
 
 .calendario-title {
   font-family: var(--fuente-primaria);
   font-weight: 400;
-  font-size: var(--fs-3xl);
+  font-size: var(--fs-2xl);
   color: #fff;
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-lg);
 }
 
 .fechas-container {
   display: grid;
-  gap: var(--spacing-md);
-  max-width: 73.625rem;
+  gap: var(--spacing-sm);
+  max-width: 60rem;
   margin: 0 auto;
 }
 
 .fecha {
   background-color: var(--gris);
   width: 100%;
-  min-height: 5.375rem;
-  border-radius: 11.4375rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  min-height: 3.5rem;
+  border-radius: 8rem;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 var(--spacing-2xl);
+  padding: 0 var(--spacing-xl);
   box-sizing: border-box;
 }
 
 .lugar,
 .dia {
   font-family: var(--fuente-primaria);
-  font-weight: 400;
-  font-size: var(--fs-xl);
+  font-weight: 200;
+  font-size: var(--fs-sm);
   color: var(--negro);
-  text-align: center;
+  text-align: left;
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 2.125rem;
+  min-height: 1.8rem;
+}
+
+.dia {
+  text-align: right;
 }
 
 .boton-tickets {
-  margin-top: var(--spacing-2xl);
-  padding: var(--spacing-sm) var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-lg);
   font-family: var(--fuente-primaria);
-  font-size: var(--fs-lg);
+  font-size: var(--fs-base);
   border: none;
-  border-radius: 11.4375rem;
+  border-radius: 8rem;
   background-color: var(--gris);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -804,35 +793,34 @@ body {
   outline-offset: 2px;
 }
 
-/* Últimas novedades */
 .ultimas-novedades {
   background-color: var(--fondo);
-  padding: var(--spacing-3xl) var(--spacing-lg);
+  padding: var(--spacing-2xl) var(--spacing-lg);
   text-align: center;
   color: var(--negro);
 }
 
 .novedades-title {
   font-family: var(--fuente-primaria);
-  font-size: var(--fs-xl);
+  font-size: var(--fs-2xl);
   font-weight: normal;
   color: white;
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-lg);
 }
 
 .novedades-grid {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
   flex-wrap: wrap;
 }
 
 .novedad-card {
-  width: 23.0625rem;
-  min-height: 40.9375rem;
+  width: 16rem;
+  min-height: 26rem;
   background-color: var(--gris);
-  border-radius: 4.5rem;
-  padding: var(--spacing-xl) var(--spacing-md);
+  border-radius: 3rem;
+  padding: var(--spacing-md) var(--spacing-sm);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -851,26 +839,26 @@ body {
 
 .novedad-card img {
   width: 100%;
-  max-width: 18.125rem;
-  height: 21.875rem;
+  max-width: 14rem;
+  height: 16rem;
   object-fit: cover;
-  border-radius: 4.5rem;
-  margin-bottom: var(--spacing-md);
+  border-radius: 3rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 .novedad-subtitulo {
   font-family: var(--fuente-primaria);
-  font-size: var(--fs-xl);
+  font-size: var(--fs-sm);
   font-weight: 400;
   text-align: center;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
   color: var(--fondo);
   margin-top: var(--spacing-xs);
 }
 
 .novedad-descripcion {
   font-family: var(--fuente-secundaria);
-  font-size: var(--fs-xl);
+  font-size: var(--fs-xs);
   font-weight: 400;
   text-align: center;
   color: var(--fondo);
@@ -878,7 +866,6 @@ body {
   padding: 0 var(--spacing-xs);
 }
 
-/* Sección contacto */
 .contact-section {
   position: relative;
   overflow: hidden;
@@ -980,22 +967,6 @@ body {
   color: white;
 }
 
-/* QR Section */
-.qr-section {
-  background-color: var(--negro);
-  padding: 12.5rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.qr-img {
-  max-width: 12.5rem;
-  width: 100%;
-  height: auto;
-}
-
-/* Footer */
 .footer {
   background-color: var(--fondo);
   padding: var(--spacing-2xl) 0;
@@ -1009,7 +980,6 @@ body {
   color: var(--gris);
 }
 
-/* Media Queries Consolidadas */
 @media (max-width: 1536px) {
   .navbar {
     width: 95%;
@@ -1019,11 +989,11 @@ body {
 
 @media (max-width: 1200px) {
   :root {
-    --nav-font-size: clamp(1rem, 1.8vw, 2rem);
+    --nav-font-size: clamp(0.8rem, 1.2vw, 1.2rem);
   }
 
   .nav-menu {
-    gap: clamp(0.75rem, 1.5vw, 1.5rem);
+    gap: clamp(0.6rem, 1.2vw, 1.2rem);
   }
 }
 
@@ -1041,7 +1011,7 @@ body {
   }
 
   .navbar {
-    padding: clamp(0.5rem, 1vw, 1rem) 0;
+    padding: clamp(0.3rem, 0.6vw, 0.6rem) 0;
     margin: var(--spacing-sm) auto 0;
   }
 
@@ -1052,11 +1022,11 @@ body {
 
 @media (max-width: 768px) {
   :root {
-    --navbar-height: clamp(4.5rem, 6vw, 6rem);
-    --logo-width: clamp(8rem, 12vw, 12rem);
-    --logo-height: clamp(2.4rem, 3.6vw, 3.6rem);
-    --cart-size: clamp(2rem, 3vw, 2.5rem);
-    --cart-icon-size: clamp(1.2rem, 1.8vw, 1.5rem);
+    --navbar-height: clamp(3.5rem, 4.5vw, 4.5rem);
+    --logo-width: clamp(6rem, 9vw, 9rem);
+    --logo-height: clamp(1.8rem, 2.7vw, 2.7rem);
+    --cart-size: clamp(1.8rem, 2.2vw, 2.2rem);
+    --cart-icon-size: clamp(1rem, 1.3vw, 1.3rem);
   }
 
   .content {
@@ -1072,13 +1042,46 @@ body {
   .card-title {
     font-size: var(--fs-lg);
   }
+
+  .calendario-title {
+    font-size: var(--fs-xl);
+  }
+
+  .fecha {
+    min-height: 3.5rem;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .lugar,
+  .dia {
+    font-size: var(--fs-base);
+  }
+
+  /* Novedades responsive */
+  .novedad-card {
+    width: 16rem;
+    min-height: 28rem;
+  }
+
+  .novedad-card img {
+    max-width: 12rem;
+    height: 14rem;
+  }
+
+  .novedad-subtitulo {
+    font-size: var(--fs-base);
+  }
+
+  .novedad-descripcion {
+    font-size: var(--fs-sm);
+  }
 }
 
 @media (max-width: 480px) {
   :root {
-    --navbar-height: clamp(4rem, 5vw, 5rem);
-    --logo-width: clamp(7rem, 10vw, 10rem);
-    --logo-height: clamp(2.1rem, 3vw, 3rem);
+    --navbar-height: clamp(3rem, 4vw, 4rem);
+    --logo-width: clamp(5rem, 8vw, 8rem);
+    --logo-height: clamp(1.5rem, 2.4vw, 2.4rem);
   }
 
   .mobile-menu-content {
@@ -1088,9 +1091,31 @@ body {
   .mobile-nav-item {
     font-size: clamp(1.25rem, 3.5vw, 2rem);
   }
+
+  .fecha {
+    min-height: 3rem;
+    border-radius: 6rem;
+  }
+
+  .lugar,
+  .dia {
+    font-size: var(--fs-sm);
+  }
+
+  /* Novedades móvil */
+  .novedad-card {
+    width: 14rem;
+    min-height: 24rem;
+    border-radius: 2rem;
+  }
+
+  .novedad-card img {
+    max-width: 10rem;
+    height: 12rem;
+    border-radius: 2rem;
+  }
 }
 
-/* Animaciones optimizadas */
 @media (prefers-reduced-motion: reduce) {
   .slider-discos-track {
     animation: none;
@@ -1108,13 +1133,11 @@ body {
   }
 }
 
-/* Mejoras de performance */
 .slider-discos-track {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
 
-/* Focus visible para mejor accesibilidad */
 @supports selector(:focus-visible) {
   .nav-item:focus {
     outline: none;
